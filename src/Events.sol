@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// События 
+// События
 
 pragma solidity ^0.8.20;
 

@@ -11,7 +11,6 @@ contract Bank {
     // переменная типа  Account
     Account private userAccount;
 
-
     // функция для активации аккаунта
     function activate() external {
         userAccount.isActive = true;

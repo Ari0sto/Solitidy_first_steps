@@ -11,6 +11,7 @@ contract BankTest is Test {
     function setUp() public {
         bank = new Bank();
     }
+
     // Тест на активацию аккаунта
     function test_Activate() public {
         bank.activate();
@@ -59,12 +60,12 @@ contract BankTest is Test {
     // Корректное изменение баланса после каждой операции
     function test_BalanceChangesCorrectlyAfterMultipleOperations() public {
         bank.activate();
-    
+
         assertEq(bank.getBalance(), 0); // Изначальный баланс 0
-    
+
         bank.deposit(500);
         assertEq(bank.getBalance(), 500); // Баланс после пополнения
-    
+
         bank.withdraw(200);
         assertEq(bank.getBalance(), 300); // Баланс после снятия
     }
